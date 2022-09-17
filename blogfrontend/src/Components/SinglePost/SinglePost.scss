@@ -1,0 +1,144 @@
+@import "../../global.scss";
+
+.singlePost {
+  width: 100%;
+  margin: 20px 200px;
+  @include mobile {
+    margin: 5px;
+  }
+
+  .singlePostWrapper {
+    padding: 20px;
+    @include mobile {
+      padding: 20px 5px;
+    }
+
+    .singlePostImage {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      @include mobile {
+        height: 180px;
+        object-fit: fill;
+      }
+    }
+
+    // update input styles
+    .writeInput {
+      margin: 20px 0;
+      font-size: 30px;
+      width: 70vw;
+      padding: 20px 0;
+      border: none;
+      &::placeholder {
+        color: rgb(189, 185, 185);
+        font-weight: 400;
+      }
+      &:focus {
+        outline-style: none;
+      }
+      @include mobile {
+        width: 100%;
+      }
+    }
+    .writeText {
+      width: 70vw;
+      height: 100vh;
+      font-family: inherit;
+      font-size: 20px;
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    .singlePostTitle {
+      display: flex;
+      // align-items: center;
+      justify-content: space-between;
+      margin: 15px 0px;
+      font-size: 28px;
+      font-family: "lora" sans-serif;
+      text-transform: capitalize;
+      @include mobile {
+        font-size: 20px;
+        flex-direction: column-reverse;
+        // align-items: flex-end;
+        margin: 5px 0px;
+      }
+      .singlePostEdit {
+        font-size: 16px;
+        @include mobile {
+          align-self: flex-end;
+          margin-bottom: 10px;
+        }
+
+        .singlePostIcon {
+          margin-left: 20px;
+          cursor: pointer;
+
+          &:first-child {
+            color: teal;
+          }
+          &:last-child {
+            color: tomato;
+          }
+        }
+      }
+    }
+
+    .singlePostInfo {
+      margin: 20px 0px 60px 0;
+      font-size: 16px;
+      color: #000000;
+      font-family: "Varela Round", Arial, Helvetica, sans-serif;
+
+      .postTime {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include mobile {
+          font-size: 10px;
+        }
+      }
+    }
+    .singlePostDesc {
+      line-height: 35px;
+      color: #666;
+      font-size: 16px;
+      &::first-letter {
+        margin-left: 20px;
+        font-size: 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+    //  update button styles
+    .formControl {
+      width: 70vw;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: auto;
+      @include mobile {
+        width: 100%;
+      }
+      .writeSubmit {
+        color: white;
+        background-color: #222;
+        padding: 15px;
+        border: none;
+        // border-radius: 10px;
+        font-size: 18px;
+        width: 100px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          background-color: #999;
+        }
+      }
+    }
+  }
+}

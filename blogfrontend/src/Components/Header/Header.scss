@@ -1,0 +1,19 @@
+@import "../../global.scss";
+
+.header {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .headerImage {
+    width: 100%;
+    height: 450px;
+    // margin-top: 80px;
+    // object-fit: cover;
+    @include mobile {
+      width: 80%;
+      height: 80%;
+    }
+  }
+}

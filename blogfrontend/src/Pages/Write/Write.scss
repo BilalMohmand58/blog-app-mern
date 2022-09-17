@@ -1,0 +1,125 @@
+@import "../../global.scss";
+
+.write {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  padding-top: 50px;
+  .imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    position: relative;
+    .writeImage {
+      width: 70vw;
+      height: 250px;
+      object-fit: cover;
+      border: 2px dotted #222;
+      background-color: rgb(230, 230, 230);
+      // border-radius: 10px;
+      // margin-right: 20px;
+      @include mobile {
+        width: 100vw;
+      }
+    }
+    .writeIcon {
+      width: 50px;
+      height: 50px;
+      font-size: 30px;
+      border: 2px solid;
+      border-radius: 50%;
+      color: rgb(129, 125, 125);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: absolute;
+      left: 50%;
+      color: #000;
+      &:hover {
+        color: #444;
+      }
+      @include mobile {
+        left: 40%;
+      }
+    }
+  }
+
+  .writeForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    width: 90vw;
+    margin-bottom: 20px;
+    .writeFormGroup {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      .writeInput {
+        margin: 20px 0;
+        font-size: 30px;
+        width: 70vw;
+        padding: 20px 0;
+        border: none;
+        &::placeholder {
+          color: rgb(189, 185, 185);
+          font-weight: 400;
+        }
+        &:focus {
+          outline-style: none;
+        }
+        @include mobile {
+          width: 100%;
+        }
+      }
+      .writeText {
+        width: 70vw;
+        height: 100vh;
+        font-family: inherit;
+        font-size: 20px;
+        @include mobile {
+          width: 100%;
+        }
+      }
+      .categoryInput {
+        font-size: 15px;
+        padding: 10px 0px;
+        border-bottom: 1px solid #999;
+      }
+    }
+
+    .formControl {
+      width: 70vw;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: auto;
+      @include mobile {
+        width: 100%;
+      }
+      .writeSubmit {
+        color: white;
+        background-color: #222;
+        padding: 15px;
+        border: none;
+        // border-radius: 10px;
+        font-size: 18px;
+        width: 100px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          background-color: #999;
+        }
+      }
+    }
+  }
+}

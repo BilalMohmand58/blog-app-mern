@@ -1,0 +1,142 @@
+@import "../../global.scss";
+
+.topbar {
+  width: 100%;
+  height: 70px;
+  background-color: rgb(235, 235, 235);
+  color: $mainColor;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  transition: all 1s ease;
+
+  .wrapper {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mobile {
+      padding: 10px;
+    }
+    .left {
+      flex: 1;
+      display: flex;
+      align-items: center;
+
+      .logo {
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: inherit;
+        margin: 10px;
+        text-decoration: none;
+      }
+    }
+    .center {
+      flex: 6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .centerContainer {
+        flex: 2;
+        .centerList {
+          display: flex;
+          list-style: none;
+          align-items: center;
+          justify-content: flex-start;
+          li {
+            margin-left: 150px;
+            font-size: 20px;
+          }
+        }
+      }
+
+      .centerSearch {
+        // padding: 5px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex: 0.7;
+        background-color: #fff;
+        input {
+          width: 100%;
+          padding: 5px;
+          outline: none;
+          border: none;
+          border-right: 1px solid rgb(0, 0, 0);
+          background: none;
+          font-size: 15px;
+        }
+        i {
+          padding: 5px;
+          cursor: pointer;
+        }
+      }
+      .centerControls {
+        margin-left: 25px;
+        flex: 0.5;
+        display: flex;
+        justify-content: flex-end;
+        .controlLink {
+          width: 70px;
+          text-align: center;
+          padding: 7px 5px;
+          color: #222;
+          margin-left: 20px;
+          text-decoration: none;
+        }
+        .logout {
+          color: rgba(255, 64, 64, 0.7);
+        }
+      }
+      @include mobile {
+        display: none;
+      }
+    }
+    .right {
+      display: flex;
+      flex: 3;
+      display: none;
+      @include mobile {
+        display: block;
+      }
+      .hamburger {
+        margin-left: auto;
+        margin-right: 0;
+        width: 32px;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        span {
+          width: 100%;
+          height: 3px;
+          background-color: $mainColor;
+          transform-origin: left;
+          transition: all 2s ease;
+        }
+      }
+    }
+  }
+  &.active {
+    background-color: $mainColor;
+    color: white;
+    .hamburger {
+      span {
+        &:first-child {
+          background-color: white;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          background-color: white;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}

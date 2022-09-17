@@ -1,0 +1,9 @@
+@import "../../global.scss";
+
+.homepage {
+  display: flex;
+  margin-top: 40px;
+  @include mobile {
+    flex-direction: column;
+  }
+}
